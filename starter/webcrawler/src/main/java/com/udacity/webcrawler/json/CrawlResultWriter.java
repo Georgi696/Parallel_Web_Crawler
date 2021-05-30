@@ -56,6 +56,7 @@ public final class CrawlResultWriter {
     // TODO: Fill in this method.
     ObjectMapper objectMapper = new ObjectMapper();
     objectMapper.disable(JsonGenerator.Feature.AUTO_CLOSE_TARGET);
+    objectMapper.disable(JsonParser.Feature.AUTO_CLOSE_SOURCE);
     try {
       objectMapper.writeValue(writer, result);
 
